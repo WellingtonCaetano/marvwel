@@ -31,10 +31,11 @@ public class CadastroVeiculoCommand implements Command {
     public String execute(HttpServletRequest request) {
 
         String next = ConstanteView.CADASTRO_VEICULO;
+
         String acao = request.getParameter("action");
 
-     if (acao.equalsIgnoreCase(request.getParameter("salvarVeiculo"))) {
-            next = ConstanteView.HOME;
+        if (acao.equals(request.getParameter("PGcadastrarVeiculo"))) {
+//            next = ConstanteView.HOME;            
 
             VeiculoTO veiculo = new VeiculoTO();
 
@@ -44,7 +45,7 @@ public class CadastroVeiculoCommand implements Command {
             veiculo.getCategoria().setCodigo(Long.parseLong(request.getParameter("categoria")));
             veiculo.getMarca().setCodigo(Long.parseLong(request.getParameter(ConstanteCadastro.CODIGO_MARCA)));
             veiculo.getModelo().setCodigo(Long.parseLong(request.getParameter(ConstanteCadastro.CODIGO_MODELO)));
-            veiculo.setAnoFabricação(Integer.parseInt(request.getParameter(ConstanteCadastro.ANO_FABRICACAO)));
+            veiculo.setAnoFabricacao(Integer.parseInt(request.getParameter(ConstanteCadastro.ANO_FABRICACAO)));
             veiculo.setPlaca(request.getParameter(ConstanteCadastro.PLACA));
             veiculo.setChassi(request.getParameter(ConstanteCadastro.CHASSI));
             veiculo.setMotor(request.getParameter(ConstanteCadastro.MOTOR));
@@ -55,13 +56,16 @@ public class CadastroVeiculoCommand implements Command {
 
             VeiculoPO dao = new VeiculoPO();
             //executa ações
-            if (codigo == null || codigo.isEmpty()) {
+            if (codigo == null || codigo.isEmpty()) {                
                 dao.salvar(veiculo);
+                next = ConstanteView.PGLISTAVEICULO;
             } else {
                 veiculo.setCodigo(Long.parseLong(codigo));
                 dao.atualizar(veiculo);
+                next = ConstanteView.PGLISTAVEICULO;
             }
         }
+        
         //lista nas combos
         request.setAttribute("categorias", new CategoriaPO().list(new CategoriaTO()));
         request.setAttribute("marcas", new MarcaPO().list(new MarcaTO()));

@@ -34,7 +34,7 @@
                 <div class="row"><br></div>
                 <!----- aqui comeca  a div que pega os dados do veiculo  -----> 
 
-                <div class="row">             
+                <div class="form-row">             
                     <div class="col-md-2" style="display: ${1 == 2 ? 'block':'none'}">
                         <div class="form-group">
                             <label for="codigo">Codigo</label>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">             
+                <div class="form-row">             
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="marca">Marca</label>
@@ -83,7 +83,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="row"> 
+                <div class="form-row"> 
                     <div class="col-md-2 has-feedback">
                         <div class="form-group has-feedback">
                             <label for="anoFabricacao">Ano de Fabricação</label>
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row"> 
+                <div class="form-row"> 
 
                     <div class="col-md-2 has-feedback">
                         <div class="form-group has-feedback">
@@ -442,6 +442,7 @@
         <!--        chama script para adicionar mascara de moeda-->                
         <script src="resources/js/jquery.maskMoney.min.js" type="text/javascript"></script>
         <script src="resources/js/jquery.maskedinput.js" type="text/javascript"></script>
+        <script src="resources/JScript/bootstrapValidator.min.js" type="text/javascript"></script>
 
         <script type="text/javascript">
                                 $(".moeda").maskMoney({prefix: 'R$ ', allowNegative: true, thousands: '.', decimal: ',', affixesStay: false});
@@ -451,13 +452,10 @@
         <script>
             jQuery("#placa").mask("aaa-99999");
         </script>
-
+        
         <script>
-
             $(document).ready(function () {
-
                 $('#form').bootstrapValidator({
-
                     fields: {
                         cpf: {
                             validators: {

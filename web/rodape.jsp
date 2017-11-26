@@ -9,11 +9,6 @@
 <script src="resources/js/jquery.maskMoney.min.js" ></script>
 <script src="resources/js/jquery.js" ></script>
 <script src="resources/js/jasny-bootstrap.js"></script>-->
-
-<script type="text/javascript">
-    $(".moeda").maskMoney({prefix: 'R$ ', allowNegative: true, thousands: '.', decimal: ',', affixesStay: false});
-    //$(".moeda").maskMoney({ formatOnBlur: true, reverse: true, prefix: '$', selectAllOnFocus: true, precision: 4, allowEmpty: true });
-</script>
 <footer class="footer">
     <div class="container">
         <p class="text-center">Rua 85 1211 - Setor Marista - Goiânia - GO - CEP: 74684245 </BR>

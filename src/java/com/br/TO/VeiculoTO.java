@@ -11,7 +11,7 @@ public  class VeiculoTO {
         private CategoriaTO categoria;
         private MarcaTO marca;
         private ModeloTO modelo;
-        private int  anoFabricação;
+        private int  anoFabricacao;
         private String placa;
 	private String chassi;
         private String motor;
@@ -25,7 +25,7 @@ public  class VeiculoTO {
         this.categoria = categoria;
         this.marca = marca;
         this.modelo = modelo;
-        this.anoFabricação = anoFabricação;
+        this.anoFabricacao = anoFabricacao;
         this.placa = placa;
         this.chassi = chassi;
         this.motor = motor;
@@ -35,12 +35,12 @@ public  class VeiculoTO {
         this.status = status;
     }
 
-    public VeiculoTO(long codigo, CategoriaTO categoria, MarcaTO marca, ModeloTO modelo, int anoFabricação, String placa, String chassi, String motor, int porta, int passageiro, float valorFranquia, boolean status) {
+    public VeiculoTO(long codigo, CategoriaTO categoria, MarcaTO marca, ModeloTO modelo, int anoFabricacao, String placa, String chassi, String motor, int porta, int passageiro, float valorFranquia, boolean status) {
         this.codigo = codigo;
         this.categoria = categoria;
         this.marca = marca;
         this.modelo = modelo;
-        this.anoFabricação = anoFabricação;
+        this.anoFabricacao = anoFabricacao;
         this.placa = placa;
         this.chassi = chassi;
         this.motor = motor;
@@ -86,12 +86,12 @@ public  class VeiculoTO {
         this.modelo = modelo;
     }
 
-    public int getAnoFabricação() {
-        return anoFabricação;
+    public int getAnoFabricacao() {
+        return anoFabricacao;
     }
 
-    public void setAnoFabricação(int anoFabricação) {
-        this.anoFabricação = anoFabricação;
+    public void setAnoFabricacao(int anoFabricacao) {
+        this.anoFabricacao = anoFabricacao;
     }
 
     public String getPlaca() {
@@ -152,7 +152,7 @@ public  class VeiculoTO {
 
     @Override
     public String toString() {
-        return "VeiculoTO{" + "codigo=" + codigo + ", categoria=" + categoria + ", marca=" + marca + ", modelo=" + modelo + ", anoFabrica\u00e7\u00e3o=" + anoFabricação + ", placa=" + placa + ", chassi=" + chassi + ", motor=" + motor + ", porta=" + porta + ", passageiro=" + passageiro + ", valorFranquia=" + valorFranquia + ", status=" + status + '}';
+        return "VeiculoTO{" + "codigo=" + codigo + ", categoria=" + categoria + ", marca=" + marca + ", modelo=" + modelo + ", anoFabrica\u00e7\u00e3o=" + anoFabricacao + ", placa=" + placa + ", chassi=" + chassi + ", motor=" + motor + ", porta=" + porta + ", passageiro=" + passageiro + ", valorFranquia=" + valorFranquia + ", status=" + status + '}';
     }
         		
 }

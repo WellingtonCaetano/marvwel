@@ -94,7 +94,7 @@ public class VeiculoPO implements InterfacePersistencia<VeiculoTO> {
             statement.setLong(1, obj.getCategoria().getCodigo());
             statement.setLong(2, obj.getMarca().getCodigo());
             statement.setLong(3, obj.getModelo().getCodigo());
-            statement.setInt(4, obj.getAnoFabricação());
+            statement.setInt(4, obj.getAnoFabricacao());
             statement.setString(5, obj.getPlaca());
             statement.setString(6, obj.getChassi());
             statement.setString(7, obj.getMotor());
@@ -132,7 +132,7 @@ public class VeiculoPO implements InterfacePersistencia<VeiculoTO> {
             ArrayList<ModeloTO> listModelo = (ArrayList) new ModeloPO().list(modelo);
             to.setModelo(listModelo.get(0));    
             //
-            to.setAnoFabricação(set.getInt("ano_fabricacao"));
+            to.setAnoFabricacao(set.getInt("ano_fabricacao"));
             to.setPlaca(set.getString("placa"));
             to.setChassi(set.getString("chassi"));
             to.setMotor(set.getString("motor"));
