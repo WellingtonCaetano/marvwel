@@ -112,7 +112,10 @@ legend {
     background-color: #ffffff;
 }
 
-
+#placa {
+    text-transform: uppercase;
+    
+}
 /*#panel4 {    
     background: black;  
     font-weight:bold;

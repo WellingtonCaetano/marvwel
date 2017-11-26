@@ -25,7 +25,7 @@
     <body> 
 
         <%@include file = "navFuncionario.jsp" %>
-        
+
         <div class="container">            
             <form  id="form" method="POST" action='mainControll?action=salvarVeiculo'  data-toggle="validator" >
 
@@ -94,7 +94,7 @@
                     <div class="col-md-2 has-feedback">
                         <div class="form-group has-feedback">
                             <label>Placa*</label>
-                            <input type="text" class="form-control" id="nome" placeholder="ABC-1234"
+                            <input type="text" class="form-control" data-mask="999-9999" id="placa" placeholder="ABC-1234"
                                    name="nome"  value="<c:out value="${veiculo.placa}" />" />
                         </div>
                     </div>   
@@ -436,12 +436,22 @@
             </form>
         </div>
         <!--fim container-->
-        <!--        chama script para adicionar mascara de moeda-->
+        
+        
+        
+        <!--        chama script para adicionar mascara de moeda-->                
         <script src="resources/js/jquery.maskMoney.min.js" type="text/javascript"></script>
+        <script src="resources/js/jquery.maskedinput.js" type="text/javascript"></script>
+
         <script type="text/javascript">
-                        $(".moeda").maskMoney({prefix: 'R$ ', allowNegative: true, thousands: '.', decimal: ',', affixesStay: false});
-                        //$(".moeda").maskMoney({ formatOnBlur: true, reverse: true, prefix: '$', selectAllOnFocus: true, precision: 4, allowEmpty: true });
+                                $(".moeda").maskMoney({prefix: 'R$ ', allowNegative: true, thousands: '.', decimal: ',', affixesStay: false});
+                                //$(".moeda").maskMoney({ formatOnBlur: true, reverse: true, prefix: '$', selectAllOnFocus: true, precision: 4, allowEmpty: true });
         </script>
+        <!--jQuery mascara placa-->       
+        <script>
+            jQuery("#placa").mask("aaa-99999");
+        </script>
+
         <script>
 
             $(document).ready(function () {
