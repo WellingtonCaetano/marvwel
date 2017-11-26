@@ -9,7 +9,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>    
-        <link href="resources/Css/stiloVeiculo.css" rel="stylesheet" type="text/css"/> <!--css stiloVeiculo-->
+        <!--<link href="resources/Css/stiloVeiculo.css" rel="stylesheet" type="text/css"/> css stiloVeiculo-->
         <title>MARWVEL</title>
 
         <%@ include file = "links.jsp" %>   
@@ -78,7 +78,7 @@
             </div>
         </div>
 
-        <%--<%@include file="rodape.jsp" %>--%>
+        <%@include file="rodape.jsp" %>
 
     </body>
 
